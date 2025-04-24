@@ -6,7 +6,7 @@ fn main() {
         ..user1
     };
 
-    println!("{0}", user2.email);
+    println!("{0}", user2.username);
 }
 
 struct User {
