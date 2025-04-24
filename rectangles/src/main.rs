@@ -1,5 +1,5 @@
 fn main() {
-    let &rect1 = Rectangle {
+    let rect1 = Rectangle {
         width: 60,
         height: 50,
     };
