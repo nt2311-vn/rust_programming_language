@@ -1,7 +1,12 @@
 fn main() {
     let user1 = build_user(String::from("email@example.com"), String::from("user123"));
 
-    println!("{0}", user1.email);
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+
+    println!("{0}", user2.email);
 }
 
 struct User {
