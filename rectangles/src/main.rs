@@ -1,10 +1,10 @@
 fn main() {
-    let rect1 = Rectangle {
-        width: 30,
+    let &rect1 = Rectangle {
+        width: 60,
         height: 50,
     };
 
-    println!("rect1 is `{:#?}`", rect1);
+    dbg!(&rect1);
 }
 
 #[derive(Debug)]
