@@ -1,6 +1,24 @@
-fn main() {
-    let x: i8 = 5;
-    let y: Option<i8> = Some(5);
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
 
-    let sum = x + y;
+fn main() {
+    let penny = Coin::Penny;
+
+    value_in_certs(penny);
+}
+
+fn value_in_certs(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        }
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
 }
