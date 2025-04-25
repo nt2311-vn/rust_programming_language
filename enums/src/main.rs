@@ -6,9 +6,7 @@ enum Coin {
 }
 
 fn main() {
-    let penny = Coin::Penny;
-
-    value_in_certs(penny);
+    value_in_certs(Coin::Penny);
 }
 
 fn value_in_certs(coin: Coin) -> u8 {
