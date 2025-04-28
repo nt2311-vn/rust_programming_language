@@ -14,9 +14,7 @@ fn main() {
     v.push(8);
 
     println!("Vector v: '{:?}", v);
-
     let third: &i32 = &v_infer[2];
-
     println!("value of third is {}", *third);
 
     let third_get: Option<&i32> = v_infer.get(2);
