@@ -63,4 +63,8 @@ fn main() {
     let x = format!("{x1}-{x2}-{x3}");
     println!("{x}");
     println!("{x1}");
+
+    for c in "Зд".chars() {
+        println!("{c}");
+    }
 }
