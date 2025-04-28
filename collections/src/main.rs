@@ -65,6 +65,6 @@ fn main() {
     let x3 = String::from("toe");
 
     let x = format!("{x1}-{x2}-{x3}");
-
     println!("{x}");
+    println!("{x1}");
 }
