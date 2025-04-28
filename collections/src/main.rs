@@ -46,4 +46,9 @@ fn main() {
         SpreadsheetCell::Text(String::from("blue")),
         SpreadsheetCell::Float(10.12),
     ];
+
+    let mut s = String::from("foo");
+    s.push_str("bar");
+
+    println!("String: {s}");
 }
