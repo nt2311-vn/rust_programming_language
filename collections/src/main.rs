@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),
@@ -67,4 +69,11 @@ fn main() {
     for c in "Зд".chars() {
         println!("{c}");
     }
+
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
+
+    println!("Scores map: '{:#?}'", scores);
 }
