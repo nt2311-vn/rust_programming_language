@@ -1,5 +1,3 @@
-use std::fmt::format;
-
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),
