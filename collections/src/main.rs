@@ -1,3 +1,9 @@
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 fn main() {
     let mut v: Vec<i32> = Vec::new();
     let v_infer = vec![1, 2, 3, 4, 5];
@@ -34,4 +40,10 @@ fn main() {
         "Iterate and mutate value of a mutable vector: '{:?}'",
         m_vec
     );
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
 }
