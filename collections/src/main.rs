@@ -23,4 +23,15 @@ fn main() {
     for i in &v {
         println!("{i}");
     }
+
+    let mut m_vec = vec![100, 32, 57];
+
+    for i in &mut m_vec {
+        *i += 50;
+    }
+
+    println!(
+        "Iterate and mutate value of a mutable vector: '{:?}'",
+        m_vec
+    );
 }
