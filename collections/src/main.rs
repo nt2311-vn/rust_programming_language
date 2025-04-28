@@ -81,4 +81,8 @@ fn main() {
     let score = scores.get(&team_name).copied().unwrap_or(0);
 
     println!("Blue score is {score}");
+
+    for (key, value) in &scores {
+        println!("{key}: {value}");
+    }
 }
