@@ -1,3 +1,5 @@
+use std::fmt::format;
+
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),
@@ -56,5 +58,13 @@ fn main() {
     let s2 = String::from("world!");
     let s3 = s1 + &s2;
 
-    println!("{s3}")
+    println!("{s3}");
+
+    let x1 = String::from("tic");
+    let x2 = String::from("tac");
+    let x3 = String::from("toe");
+
+    let x = format!("{x1}-{x2}-{x3}");
+
+    println!("{x}");
 }
