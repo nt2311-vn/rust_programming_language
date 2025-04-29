@@ -94,4 +94,12 @@ fn main() {
     map.insert(field_name.clone(), field_value.clone());
 
     println!("{field_name} {field_value}");
+
+    let mut new_scores = HashMap::new();
+    new_scores.insert(String::from("Blue"), 10);
+
+    new_scores.entry(String::from("Yellow")).or_insert(50);
+    new_scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("'{:#?}'", new_scores)
 }
