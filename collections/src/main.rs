@@ -74,6 +74,7 @@ fn main() {
 
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
+    scores.insert(String::from("Blue"), 30);
 
     println!("Scores map: '{:#?}'", scores);
 
