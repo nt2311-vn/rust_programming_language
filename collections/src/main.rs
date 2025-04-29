@@ -101,5 +101,15 @@ fn main() {
     new_scores.entry(String::from("Yellow")).or_insert(50);
     new_scores.entry(String::from("Blue")).or_insert(50);
 
-    println!("'{:#?}'", new_scores)
+    println!("'{:#?}'", new_scores);
+
+    let text = "hello world wonderful world";
+    let mut count_words = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = count_words.entry(word).or_insert(0);
+        *count += 1;
+    }
+
+    println!("Count word result: '{:#?}'", count_words);
 }
