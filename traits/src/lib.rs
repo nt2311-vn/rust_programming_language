@@ -14,7 +14,7 @@ impl Summary for NewsArticle {
     }
 }
 
-struct Tweet {
+pub struct Tweet {
     pub username: String,
     pub content: String,
     pub reply: bool,
