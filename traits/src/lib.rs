@@ -13,3 +13,16 @@ impl Summary for NewsArticle {
         format!("{}, by {} ({})", self.headline, self.author, self.location)
     }
 }
+
+struct Tweet {
+    pub username: String,
+    pub content: String,
+    pub reply: bool,
+    pub retweet: bool,
+}
+
+impl Summary for Tweet {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
