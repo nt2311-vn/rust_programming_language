@@ -1,5 +1,5 @@
 use traits::{Summary, Tweet};
 
 fn main() {
-    let tweet = Tweet{}
+    let tweet = Tweet {};
 }
