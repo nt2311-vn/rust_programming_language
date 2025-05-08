@@ -23,4 +23,8 @@ fn main() {
 
     borrows_mutably();
     println!("After calling closure: {:?}", mutable_list);
+
+    thread::spawn(move || println!("From thread: {:?}", list))
+        .join()
+        .unwrap();
 }
