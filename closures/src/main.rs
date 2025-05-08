@@ -43,5 +43,13 @@ fn main() {
     println!(
         "The user with preference {:?} gets {:?}",
         user_pref1, give_away1
-    )
+    );
+
+    let user_pref2 = None;
+    let give_away2 = store.giveaway(user_pref2);
+
+    println!(
+        "The user with preference {:?} gets {:?}",
+        user_pref2, give_away2
+    );
 }
