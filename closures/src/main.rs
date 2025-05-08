@@ -33,5 +33,15 @@ impl Inventory {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let store = Inventory {
+        shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
+    };
+
+    let user_pref1 = Some(ShirtColor::Red);
+    let give_away1 = store.giveaway(user_pref1);
+
+    println!(
+        "The user with preference {:?} gets {:?}",
+        user_pref1, give_away1
+    )
 }
