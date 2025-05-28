@@ -1,6 +1,6 @@
 use std::ops::Deref;
 
-struct MyBox<T>(T);
+struct MBox<T>(T);
 
 impl<T> MyBox<T> {
     fn new(x: T) -> MyBox<T> {
