@@ -20,7 +20,7 @@ where
         }
     }
 
-    pub fn set_value(&mut self, value: usize) {
+    pub fn set_value(&self, value: usize) {
         self.value = value;
         let percentage_of_max = self.value as f64 / self.max as f64;
 
@@ -37,9 +37,10 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::cell::RefCell;
 
     struct MockMessenger {
-        sent_messages: Vec<String>,
+        sent_messages: RefCell<Vec<String>>,
     }
 
     impl MockMessenger {
@@ -54,5 +55,14 @@ mod tests {
         fn send(&self, msg: &str) {
             self.sent_messages.push(String::from(msg));
         }
+    }
+
+    #[test]
+    fn it_sends_an_over_75_percent_warning_message() {
+        let mock_messenger = MockMessenger::new();
+        let mut limit_tracker = LimitTracker::new(&mock_messenger, 100);
+
+        limit_tracker.set_value(80);
+        assert_eq!(mock_messenger.sent_messages.len(), 1);
     }
 }
