@@ -46,7 +46,7 @@ mod tests {
     impl MockMessenger {
         fn new() -> MockMessenger {
             MockMessenger {
-                sent_messages: vec![],
+                sent_messages: RefCell::new(vec![]),
             }
         }
     }
