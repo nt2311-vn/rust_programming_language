@@ -14,4 +14,12 @@ fn main() {
         println!("hi number {i} from the main thread!");
         thread::sleep(Duration::from_millis(1));
     }
+
+    let v = vec![1, 2, 3];
+
+    let vec_handle = thread::spawn(move || {
+        println!("Here's a vector: {:?}", v);
+    });
+
+    vec_handle.join().unwrap();
 }
